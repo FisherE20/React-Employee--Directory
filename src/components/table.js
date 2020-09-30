@@ -5,16 +5,16 @@ import "./style.css";
 import Search from "./search"
 
 const employees = [
-    {name: "John Doe", Department: "Sales", email: "JDoe@" },
-    {name: "Mike Chan", Department: "Sales", email: "MChan" },
-    {name: "Ashley Rodriguez", Department: "Engineering", email: "ARodriguez@" },
-    {name: "Kevin Tupik", Department: "Engineering", email: "KTupik@" },
-    {name: "Malia Brown", Department: "Finance", email: "MBrown@" },
-    {name: "Sarah Lourd", Department: "Legal", email: "SLourd@" },
-    {name: "Tom Allen", Department: "Legal", email: "TAllen@" },
-    {name: "Tammer Galal", Department: "Engineering", email: "TGalal@" },
-    {name: "John Fisher", Department: "Human Resources", email: "JFisher@" },
-    {name: "Megan Dooher", Department: "Marketing", email: "MDooher@" }
+    {name: "John Doe", department: "Sales", email: "JDoe@ReileyEngineering.com" },
+    {name: "Mike Chan", department: "Sales", email: "MChan@ReileyEngineering.com" },
+    {name: "Ashley Rodriguez", department: "Engineering", email: "ARodriguez@ReileyEngineering.com" },
+    {name: "Kevin Tupik", department: "Engineering", email: "KTupik@ReileyEngineering.com" },
+    {name: "Malia Brown", department: "Finance", email: "MBrown@ReileyEngineering.com" },
+    {name: "Sarah Lourd", department: "Legal", email: "SLourd@ReileyEngineering.com" },
+    {name: "Tom Allen", department: "Legal", email: "TAllen@ReileyEngineering.com" },
+    {name: "Tammer Galal", department: "Engineering", email: "TGalal@ReileyEngineering.com" },
+    {name: "John Fisher", department: "Human Resources", email: "JFisher@ReileyEngineering.com" },
+    {name: "Megan Dooher", department: "Marketing", email: "MDooher@ReileyEngineering.com" }
 ]
 
 function Table () {
@@ -28,7 +28,7 @@ function Table () {
             },
             {
                 Header : "Department",
-                accessor : "depasrtment",
+                accessor : "department",
             },
             {
                 Header : "Email",
@@ -44,7 +44,7 @@ function Table () {
         getTableBodyProps,
         headerGroups,
         rows,
-        perpareRow,
+        prepareRow,
     } = useTable(
         {
             columns,
@@ -83,7 +83,7 @@ function Table () {
               <tbody {...getTableBodyProps()}>
                 {firstPageRows.map(
                   (row, i) => {
-                    perpareRow(row);
+                    prepareRow(row);
                     return (
                       <tr {...row.getRowProps()}>
                         {row.cells.map(cell => {
