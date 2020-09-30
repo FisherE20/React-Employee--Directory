@@ -41,7 +41,7 @@ function Table () {
 
     const {
         getTableProps,
-        getTablebodyProps,
+        getTableBodyProps,
         headerGroups,
         rows,
         perpareRow,
@@ -83,7 +83,7 @@ function Table () {
               <tbody {...getTableBodyProps()}>
                 {firstPageRows.map(
                   (row, i) => {
-                    prepareRow(row);
+                    perpareRow(row);
                     return (
                       <tr {...row.getRowProps()}>
                         {row.cells.map(cell => {
