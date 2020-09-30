@@ -49,8 +49,8 @@ function Table () {
         {
             columns,
             data,
-        }
-        useSortBY
+        },
+        useSortBy
         )
         const firstPageRows = rows.slice(0,20)
 
