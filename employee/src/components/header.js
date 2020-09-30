@@ -1,7 +1,7 @@
 import React from "react";
 import'./style.css'
 
-Function Header() {
+function Header() {
     return (
         <div>
         <h1> Employee Directory</h1>
